@@ -1,0 +1,30 @@
+
+public class CalculatorApp {
+
+	public static void main(String[] args) {
+		// Welcome the user to the program
+		System.out.println("Welcome to the Calculator App!");
+		System.out.println(); // print a blank line
+
+		// define 2 ints or doubles
+		double x = 21.0;
+		double y = 2.0;
+
+		// define sum, difference, product, quotient
+		double sum = x + y; // sum = 24
+		double difference = x - y; // difference = 18
+		double product = x * y; // product = 63
+		double quotient = x / y; // quotient = 10.5
+
+		// print results
+		System.out.println(sum);
+		System.out.println(difference);
+		System.out.println(product);
+		System.out.println(quotient);
+		
+		// end program
+		System.out.println("Goodbye!");
+
+	}
+
+}

@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class gradeConverter {
+
+	public static void main(String[] args) {
+		// Welcome the user
+		System.out.println("Welcome to the Letter Grade Converter");
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter numerical grade: ");
+		int numericalGrade = sc.nextInt();
+		 
+		
+		
+	}
+
+}

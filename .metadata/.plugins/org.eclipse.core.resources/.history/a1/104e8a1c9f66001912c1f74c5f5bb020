@@ -1,0 +1,57 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.NumberFormat;
+import java.util.Scanner;
+
+public class interestCalculator {
+
+	public static void main(String[] args) {
+		//Welcome
+		System.out.println("Welcome to the Interest Calculator");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String choice = "y";
+		while (choice.equalsIgnoreCase("y")) {
+		
+		//Prompt User Input
+		System.out.println("Enter loan amount: ");
+		double loanAmount = sc.nextDouble();
+		
+		System.out.println("Enter interest rate: ");
+		double interestRate = sc.nextDouble();
+		
+		//Business logic
+		loanAmount = new BigDecimal(loanAmount)
+				.setScale(2, RoundingMode.HALF_UP) .doubleValue();
+		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		String loanAmountString = currency.format(loanAmount);
+		
+		interestRate = new BigDecimal(interestRate)
+				.setScale(3, RoundingMode.HALF_UP) .doubleValue();
+		NumberFormat percent = NumberFormat.getPercentInstance();
+		String interestRateString = percent.format(interestRate);
+		
+		
+		double interest = loanAmount * interestRate;
+		interest = new BigDecimal(interest)
+				.setScale(2, RoundingMode.HALF_UP).doubleValue();
+		NumberFormat currency1 = NumberFormat.getCurrencyInstance();
+		String interestString = currency1.format(interest);
+		
+		//Display Results
+		System.out.println("Loan amount: "+loanAmountString);
+		System.out.println("Interest rate: "+interestRateString);
+		System.out.println("Interest: "+interestString);
+		
+		System.out.println("Continue?(y/n) ");
+		choice = sc.next();
+			
+		}
+		
+		//Goodbye
+		System.out.println("BYE!");
+
+	
+	}
+}

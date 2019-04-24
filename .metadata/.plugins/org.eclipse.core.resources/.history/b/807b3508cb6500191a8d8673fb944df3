@@ -1,0 +1,28 @@
+
+public class CalculatorApp {
+
+	public static void main(String[] args) {
+		// Welcome the user to the program
+		System.out.println("Welcome to the Calculator App!");
+		System.out.println(); //print a blank line
+		
+		// initialize variables
+		double x = 21.0;
+		double y = 2.0;
+		double result1 = x + y;	// result1 = 24
+		double result2 = x - y;	// result2 = 18
+		double result3 = x * y;	// result3 = 63
+		double result4 = x / y;	// result4 = 10.5
+		
+		// print results
+		System.out.println(result1);
+		System.out.println(result2);
+		System.out.println(result3);
+		System.out.println(result4);
+		System.out.println("Goodbye!");
+		
+		
+
+	}
+
+}
