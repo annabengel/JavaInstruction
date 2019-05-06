@@ -106,6 +106,19 @@
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch11_ex4_CardDeck"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch12_ex1_CardDeck"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch11_ex1_MonthSales"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch08_ex2_Product"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch08_ex1_Product"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch07_ex2_FutureValue"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch07_ex1_Product"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch09_ex1_DisplayableTest"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch05_ex1_FutureValue"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch04_ex4_FutureValue"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch04_ex3_GuessNumber"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch04_ex2_Invoice"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch04_ex1_FutureValue"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch03_ex1_MPG"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch02_ex3_Invoice"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch02_ex2_TestScore"/>
@@ -113,7 +126,6 @@
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch01_ex1_TestScore"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch01_ex1_Invoice"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\book_apps"/>
-			<item value="C:\Users\MaxTech\Documents\java\eclipse\book_apps\ch01_FutureValueGUI"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
