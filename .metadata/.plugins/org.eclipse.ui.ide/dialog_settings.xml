@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="installedFeatures">
+		<item value="com.chookapp.org.Bracketeer:1.2.0.201203031719"/>
+		<item value="com.chookapp.org.BracketeerJDT:1.2.0.201203031719"/>
+		<item value="com.chookapp.org.OverviewRulerBackground:1.1.0.201112231228"/>
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
 		<item value="org.aspectj:1.9.2.201902212122"/>
 		<item value="org.eclipse.ajdt:2.2.4.201902212122"/>
@@ -106,6 +109,9 @@
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch07_ex3_AreaAndPerimeter"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch16_ex1_ExceptionTester"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch15_ex1_CustomerManager"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch11_ex4_CardDeck"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch12_ex1_CardDeck"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch11_ex1_MonthSales"/>
@@ -123,9 +129,6 @@
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch02_ex3_Invoice"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch02_ex2_TestScore"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch02_ex1_Invoice"/>
-			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch01_ex1_TestScore"/>
-			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch01_ex1_Invoice"/>
-			<item value="C:\Users\MaxTech\Documents\java\eclipse\book_apps"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
