@@ -23,6 +23,16 @@ public class Stuffy {
 		this.limbs = limbs;
 	}
 	
+	
+	
+	public Stuffy(String type, String color, String size, int limbs) {
+		super();
+		this.type = type;
+		this.color = color;
+		this.size = size;
+		this.limbs = limbs;
+	}
+
 	// getters and setters
 	public int getId() {
 		return id;
@@ -35,7 +45,6 @@ public class Stuffy {
 	public String getType() {
 		return type;
 	}
-
 	public void setType(String type) {
 		this.type = type;
 	}

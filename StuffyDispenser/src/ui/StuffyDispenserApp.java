@@ -10,7 +10,7 @@ import util.StringUtils;
 
 public class StuffyDispenserApp {
 	
-	private static DAO<Stuffy> productDAO = new StuffyDB();
+	private static DAO<Stuffy> stuffyDAO = new StuffyDB();
 
 	public static void main(String[] args) {
 	
@@ -32,6 +32,8 @@ public class StuffyDispenserApp {
 				addStuffy();
 			} else if (action.equalsIgnoreCase("del")) {
 				deleteStuffy();
+			} else if (action.equalsIgnoreCase("update")) {
+				updateStuffy();
 			} else if (action.equalsIgnoreCase("help") ||
 					   action.equalsIgnoreCase("menu")) {
 				displayMenu();
@@ -51,6 +53,7 @@ public class StuffyDispenserApp {
 		System.out.println("list      - List all stuffies");
 		System.out.println("add       - Add a stuffy");
 		System.out.println("del       - Delete a stuffy");
+		System.out.println("update    - Update a stuffy");
 		System.out.println("help      - Show this menu");
 		System.out.println("exit      - Exit this App\n");
 	}
@@ -59,10 +62,9 @@ public class StuffyDispenserApp {
 		System.out.println("STUFFY LIST:");
 		System.out.println("================");
 		
-		//get list of products from text file
-		List<Stuffy> products = productDAO.getAll();
+		List<Stuffy> stuffy = stuffyDAO.getAll();
 		StringBuilder sb = new StringBuilder();
-		for (Stuffy s : products) {
+		for (Stuffy s : stuffy) {
 			sb.append(StringUtils.padWithSpaces(Integer.toString(s.getId()), 8));
 			sb.append(StringUtils.padWithSpaces(s.getType(), 25));
 			sb.append(StringUtils.padWithSpaces(s.getColor(), 25));
@@ -74,30 +76,54 @@ public class StuffyDispenserApp {
 	}
 	
 	private static void addStuffy() {
-		int ID = Console.getInt("Enter stuffy ID: ");
 		String type = Console.getRequiredString("Enter stuffy type: ");
 		String color = Console.getRequiredString("Enter stuffy color: ");
 		String size = Console.getRequiredString("Enter stuffy size: ");
 		int limbs = Console.getInt("Enter # of limbs: ");
 		
-		Stuffy s = new Stuffy(ID, type, color, size, limbs);
-		if (productDAO.add(s)) {
+		Stuffy s = new Stuffy (type, color, size, limbs);
+		if (stuffyDAO.add(s)) {
 			System.out.println("Stuffy " + s.getId() + " successfully added.");
 		} else {
 			System.out.println("Error adding product");
 		}
 	}
 	
+	private static void updateStuffy() {
+	      int ID = Console.getInt("Enter stuffy ID to update: ");
+	        
+	      Stuffy s = stuffyDAO.get(ID);
+	        if (s == null) {
+	            System.out.println("No Stuffy matches that code.\n");
+	            return;
+	        } 
+	        
+	        String color = Console.getRequiredString("Enter stuffy color: ");
+
+	        s.setColor(color);
+
+	        boolean success = stuffyDAO.update(s);
+	        if (success) {
+	            System.out.println(ID
+	                    + " has been updated in the database.\n");
+	        } else {
+	            System.out.println("Error! Unable to update stuffy.\n");
+	        }
+
+	    }
+
+
+	
 	private static void deleteStuffy() {
 		System.out.println("DELETING STUFFY!!");
 		
 		int ID = Console.getInt("Enter stuffy ID: ");
 		// get a product for the code 
-		Stuffy s = productDAO.get(ID);
+		Stuffy s = stuffyDAO.get(ID);
 		if (s == null) {
 			System.out.println("Invalid code.");
 		} else {
-			if (productDAO.delete(s)) {
+			if (stuffyDAO.delete(s)) {
 				System.out.println("Delete Success");
 			} else {
 				System.out.println("Error deleting product");

@@ -23,9 +23,8 @@ public class StuffyDB implements DAO<Stuffy>{
 	
 	public Stuffy get(int ID) {
 		// test ALL sql statements (i.e. SELECT) in sql workbench before adding to java
-		// code
-		String sql = "SELECT * FROM stuffydb.product" + " where ID = ?"; // '?' is placeholder for code to be added later
-		List<Stuffy> products = new ArrayList<>();
+		String sql = "SELECT * FROM stuffydb.stuffy" + " where ID = ?"; // '?' is placeholder for code to be added later
+		List<Stuffy> stuffy = new ArrayList<>();
 		try (Connection connection = getConnection(); PreparedStatement ps = connection.prepareStatement(sql)) {
 			ps.setInt(1, ID);
 			ResultSet rs = ps.executeQuery();
@@ -51,8 +50,8 @@ public class StuffyDB implements DAO<Stuffy>{
 	
 	@Override
 	public List<Stuffy> getAll() {
-		String sql = "SELECT * FROM Product";
-		List<Stuffy> products = new ArrayList<>();
+		String sql = "SELECT * FROM Stuffy";
+		List<Stuffy> stuffy = new ArrayList<>();
 		try (Connection connection = getConnection(); PreparedStatement ps = connection.prepareStatement(sql)) {
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -64,20 +63,20 @@ public class StuffyDB implements DAO<Stuffy>{
 				int limbs = rs.getInt("Limbs");
 
 				Stuffy s = new Stuffy(ID, type, color, size, limbs);
-				products.add(s);
+				stuffy.add(s);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.err.println(e);
-			products = null;
+			stuffy = null;
 		}
 
-		return products;
+		return stuffy;
 	}
 	
 	@Override
 	public boolean add(Stuffy t) {
-		String sql = "INSERT INTO Product (Type, Color, Size, Limbs) " + "VALUES (?, ?, ?, ?)";
+		String sql = "INSERT INTO Stuffy (Type, Color, Size, Limbs) " + "VALUES (?, ?, ?, ?)";
 		try (Connection connection = getConnection(); PreparedStatement ps = connection.prepareStatement(sql)) {
 			ps.setString(1, t.getType());
 			ps.setString(2, t.getColor());
@@ -93,13 +92,26 @@ public class StuffyDB implements DAO<Stuffy>{
 	
 	@Override
 	public boolean update(Stuffy t) {
-		// TODO Auto-generated method stub
-		return false;
+		// first attempt
+		String sql = "UPDATE Stuffy SET "
+					+ " Color = ? "
+					+ "WHERE ID = ?";
+		try (Connection connection = getConnection();
+				PreparedStatement ps = connection.prepareStatement(sql)) {
+			ps.setInt(2, t.getId());
+			ps.setString(1, t.getColor());
+			ps.executeUpdate();
+			return true;
+		}
+		catch (SQLException e) {
+			System.err.println(e);
+			return false;
+		}
 	}
 	
 	@Override
 	public boolean delete(Stuffy t) {
-		String sql = "delete from product " +
+		String sql = "delete from Stuffy " +
 				"where ID = ?";
 		try (Connection connection = getConnection();
 				PreparedStatement ps = connection.prepareStatement(sql)) {
