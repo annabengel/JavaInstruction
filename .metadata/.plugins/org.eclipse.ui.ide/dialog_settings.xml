@@ -109,6 +109,8 @@
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch22_ex2_BookCatalog"/>
+			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch22_ex1_BookCatalog"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch07_ex3_AreaAndPerimeter"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch16_ex1_ExceptionTester"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch15_ex1_CustomerManager"/>
@@ -127,8 +129,6 @@
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch04_ex1_FutureValue"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch03_ex1_MPG"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch02_ex3_Invoice"/>
-			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch02_ex2_TestScore"/>
-			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch02_ex1_Invoice"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
