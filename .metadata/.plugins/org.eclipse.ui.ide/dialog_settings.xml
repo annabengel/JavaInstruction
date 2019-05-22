@@ -109,6 +109,7 @@
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\repos\cloned-repos\Sean\java-instruction-bc201901\JUnitPiratesStart"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch22_ex2_BookCatalog"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch22_ex1_BookCatalog"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch07_ex3_AreaAndPerimeter"/>
@@ -128,10 +129,13 @@
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch04_ex2_Invoice"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch04_ex1_FutureValue"/>
 			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch03_ex1_MPG"/>
-			<item value="C:\Users\MaxTech\Documents\java\eclipse\ex_starts\ch02_ex3_Invoice"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="526"/>
+		<item key="DIALOG_Y_ORIGIN" value="209"/>
 	</section>
 </section>
